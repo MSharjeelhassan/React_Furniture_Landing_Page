@@ -207,23 +207,23 @@ function App() {
         <div className="container">
           <div className="row justify-content-center">
             <div
-              className="col-lg-6 display-5 mb-5 fw-bold"
+              className=" text-center col-lg-12 col-md-12 col-12 col-sm-10 display-5 mb-5 fw-bold"
               style={{ marginTop: 150 }}
             >
               <p>Elevate Your Living Room</p>
             </div>
           </div>
-          <div className="row justify-content-center mb-5 g-0">
+          <div className="row justify-content-center mb-5 g-3">
             {livingRoomProducts.map((a) => (
-              <div className="col-lg-3 ">
-                <div>
-                  <div className="card shadow " style={{ width: 320 }}>
+              <div className="col-lg-3 col-md-4 col-12 col-sm-10 text-start ">
+                <div className="">
+                  <div className="card shadow  " >
                     <img
                       src={a.image}
                       style={{ height: 270 }}
-                      className="card-img-top"
+                      className="card-img-top img-fluid"
                     />
-                    <div className="card-body">
+                    <div className="card-body border border-danger border-2 ">
                       <div className="card-text pb-2">
                         <div>
                           <div className="d-flex justify-content-between">
@@ -233,13 +233,13 @@ function App() {
                               <div className="ring bg-primary"></div>
                               <div className="ring bg-primary"></div>
                             </div>
-                            <div>
+                            {/* <div>
                               <i className="bi bi-arrow-right"></i>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </div>
-                      <h5 className="card-title h5">{a.name}</h5>
+                      <h5 className="card-title h5 ext-truncate">{a.name}</h5>
                       <div className="card-text">
                         <div>
                           <h6 className="h6">{a.price}</h6>
@@ -255,8 +255,8 @@ function App() {
       </section>
       <section className="border border-danger bg-primary my-5" id="section3">
         <div className="container">
-          <div className="row justify-content-around pt-5 mb-5 ">
-            <div className="col-lg-3 ms-5 border">
+          <div className="row justify-content-around  pt-5 mb-5 ">
+            <div className="col-lg-3 pb-2 ms-5 border">
               <div>
                 <h3>Luxurious Bed</h3>
                 <h6>
@@ -298,21 +298,22 @@ function App() {
         </div>
       </section>
       <section id="section4">
-        <div className="container">
-          <div className="row pt-5 justify-content-center">
+        <div className="d-flex justify-content-center align-item-center">
+        <div className="container" >
+          <div className="row pt-5 justify-content-center ">
             <div className="col-lg-6 display-5 mb-5 fw-bold text-center">
               <p>All Products</p>
             </div>
           </div>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center   border border-3 border-success ">
             {allProducts.map((a) => (
-              <div className="col-lg-4 border ">
-              <div>
-                <div className="card shadow mb-4 " style={{ width: 350 }}>
+              <div className="col-sm-12 col-md-6 col-lg-3 ms-lg-2 col-12 border border-3 border-primary ">
+              <div className="w-100" >
+                <div className="card shadow " >
                   <img
                     src={a.image}
-                    style={{ height: 270 }}
-                    className="card-img-top"
+                    style={{ height: 250 }}
+                    className="card-img-top img-fluid"
                   />
                   <div className="card-body">
                     <div className="card-text pb-2">
@@ -325,12 +326,12 @@ function App() {
                             <div className="ring bg-primary"></div>
                           </div>
                           <div>
-                            <i className="bi bi-arrow-right"></i>
+                          <i className="bi bi-cart-check"></i>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <h5 className="card-title h5">{a.name}</h5>
+                    <h5 className="card-body- h5">{a.name}</h5>
                     <div className="card-text">
                       <div>
                         <h6 className="h6">{a.price}</h6>
@@ -343,6 +344,8 @@ function App() {
             ))}
           </div>
         </div>
+        </div>
+        
 
       </section>
       <section id="section5">
