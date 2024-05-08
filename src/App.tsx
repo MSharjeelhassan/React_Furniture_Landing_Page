@@ -170,7 +170,7 @@ function App() {
           </div>
         </div>
       </nav>
-      <section id="hero">
+      <section className="" id="hero">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6 mt-5">
@@ -213,9 +213,9 @@ function App() {
               <p>Elevate Your Living Room</p>
             </div>
           </div>
-          <div className="row justify-content-center mb-5 g-3">
+          <div className="row justify-content-center gy-3">
             {livingRoomProducts.map((a) => (
-              <div className="col-lg-3 col-md-4 col-12 col-sm-10 text-start ">
+              <div className="col-lg-4 col-md-4 col-12 col-sm-10 text-start ">
                 <div className="">
                   <div className="card shadow  " >
                     <img
@@ -223,7 +223,7 @@ function App() {
                       style={{ height: 270 }}
                       className="card-img-top img-fluid"
                     />
-                    <div className="card-body border border-danger border-2 ">
+                    <div className="card-body  ">
                       <div className="card-text pb-2">
                         <div>
                           <div className="d-flex justify-content-between">
@@ -239,7 +239,7 @@ function App() {
                           </div>
                         </div>
                       </div>
-                      <h5 className="card-title h5 ext-truncate">{a.name}</h5>
+                      <h5 className="card-title h5 text-truncate">{a.name}</h5>
                       <div className="card-text">
                         <div>
                           <h6 className="h6">{a.price}</h6>
@@ -253,7 +253,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="border border-danger bg-primary my-5" id="section3">
+      {/* <section className="border border-danger bg-primary my-5" id="section3">
         <div className="container">
           <div className="row justify-content-around  pt-5 mb-5 ">
             <div className="col-lg-3 pb-2 ms-5 border">
@@ -269,7 +269,7 @@ function App() {
                     <img className="img-fluid" src={ring1} alt="" />
                   </div>
                   <div className="ring bg-primary">
-                    {/* <img className="img-fluid" src={ring2} alt="" /> */}
+                    
                   </div>
                   <div className="ring overflow-hidden">
                     <img className="img-fluid" src={ring3} alt="" />
@@ -296,7 +296,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section id="section4">
         <div className="d-flex justify-content-center align-item-center">
         <div className="container" >
@@ -305,9 +305,9 @@ function App() {
               <p>All Products</p>
             </div>
           </div>
-          <div className="row justify-content-center   border border-3 border-success ">
+          <div className="row justify-content-center row-cols-2 gy-3 ">
             {allProducts.map((a) => (
-              <div className="col-sm-12 col-md-6 col-lg-3 ms-lg-2 col-12 border border-3 border-primary ">
+              <div className="col-lg-4 col-md-4 col-12 col-sm-10  ">
               <div className="w-100" >
                 <div className="card shadow " >
                   <img
@@ -318,7 +318,7 @@ function App() {
                   <div className="card-body">
                     <div className="card-text pb-2">
                       <div>
-                        <div className="d-flex justify-content-between">
+                        <div className="d-flex justify-content-between align-item-top">
                           <div className="d-flex gap-2">
                             <div className="ring bg-primary"></div>
                             <div className="ring bg-primary"></div>
@@ -326,12 +326,12 @@ function App() {
                             <div className="ring bg-primary"></div>
                           </div>
                           <div>
-                          <i className="bi bi-cart-check"></i>
+                          <i className="bi bi-cart-check fs-2"></i>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <h5 className="card-body- h5">{a.name}</h5>
+                    <h5 className="card-title- text-truncate h5">{a.name}</h5>
                     <div className="card-text">
                       <div>
                         <h6 className="h6">{a.price}</h6>

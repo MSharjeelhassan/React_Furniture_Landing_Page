@@ -23,9 +23,10 @@
   padding:0 !important;
 } */
 #hero{
-  background-image: url(./images/headerSofa.jpg);
+  background-image: url(./images/luxurySofa.jpg);
   background-repeat: no-repeat;
-  background-size: cover ;
+  background-size:cover ;
+  
 }
 #section3{
   background-image: linear-gradient(to right, white, #ACE1AF 90%);
