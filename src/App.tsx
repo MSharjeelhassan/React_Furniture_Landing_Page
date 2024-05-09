@@ -21,7 +21,10 @@ import ap6 from "./images/ap6.jpg";
 import ap7 from "./images/ap7.jpg";
 import ap8 from "./images/ap8.jpg";
 import ap9 from "./images/ap9.jpg";
-import chairPng from './images/chairPng.png';
+import chairPng from "./images/chairPng.jpg";
+import blog1 from "./images/blog1.jpg";
+import blog2 from "./images/blog2.jpg";
+import blog3 from "./images/blog3.jpg";
 
 let livingRoomProducts = [
   {
@@ -85,6 +88,24 @@ let allProducts = [
     name: "Drawing Room Set",
     image: ap9,
     price: "$ 580.5",
+  },
+];
+
+let blog = [
+  {
+    image: blog1,
+    title: "Outdoor Wild Sofa",
+    des: "lorem dasfffgdfgsdfgdf sfdgsfgsdfg asfgsdfgfdsfdg",
+  },
+  {
+    image: blog2,
+    title: "Wild Sofa",
+    des: "lorem dasfffgdfgsdfgdf sfdgsfgsdfg asfgsdfgfdsfdg",
+  },
+  {
+    image: blog3,
+    title: "Outdoor Wild Sofa on Beach",
+    des: "lorem dasfffgdfgsdfgdf sfdgsfgsdfg ",
   },
 ];
 
@@ -218,11 +239,12 @@ function App() {
             {livingRoomProducts.map((a) => (
               <div className="col-lg-4 col-md-4 col-12 col-sm-10 text-start ">
                 <div className="">
-                  <div className="card shadow  " >
+                  <div className="card shadow  ">
                     <img
+                      id=""
                       src={a.image}
-                      style={{ height: 270 }}
-                      className="card-img-top img-fluid"
+                      style={{ height: 300 }}
+                      className="card-img-top img-fluid allImages"
                     />
                     <div className="card-body  ">
                       <div className="card-text pb-2">
@@ -254,10 +276,10 @@ function App() {
           </div>
         </div>
       </section>
-      {/* <section className="border border-danger bg-primary my-5" id="section3">
+      <section className="  my-5" id="section3">
         <div className="container">
-          <div className="row justify-content-around  pt-5 mb-5 ">
-            <div className="col-lg-3 pb-2 ms-5 border">
+          <div className="row justify-content-between align-items-center pt-5 mb-5 gy-5 text-center text-lg-start ">
+            <div className="col-lg-3 px-5 px-lg-0 ">
               <div>
                 <h3>Luxurious Bed</h3>
                 <h6>
@@ -265,15 +287,15 @@ function App() {
                   design, Plush comfort
                 </h6>
                 <p>$ 260</p>
-                <div className="d-flex gap-3 pb-2">
-                  <div className="ring overflow-hidden border border-2 border-success">
-                    <img className="img-fluid" src={ring1} alt="" />
-                  </div>
-                  <div className="ring bg-primary">
-                    
-                  </div>
-                  <div className="ring overflow-hidden">
-                    <img className="img-fluid" src={ring3} alt="" />
+                <div>
+                  <div className="d-flex gap-3 pb-2 justify-content-center justify-content-lg-start ">
+                    <div className="ring overflow-hidden border border-2 border-success">
+                      <img className="img-fluid" src={ring1} alt="" />
+                    </div>
+                    <div className="ring bg-primary"></div>
+                    <div className="ring overflow-hidden">
+                      <img className="img-fluid" src={ring3} alt="" />
+                    </div>
                   </div>
                 </div>
                 <button className="btn btn-success rounded-pill" type="button">
@@ -281,8 +303,8 @@ function App() {
                 </button>
               </div>
             </div>
-            <div className="col-lg-4 me-5">
-              <div className="border position-relative border-success border-2">
+            <div className="col-lg-6 ">
+              <div className=" position-relative pb-5">
                 <p id="pz" className=" ">
                   SALE <span className="fw-bold">30</span>
                   <sup>%</sup> OFF
@@ -297,87 +319,194 @@ function App() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+
       <section id="section4">
         <div className="d-flex justify-content-center align-item-center">
-        <div className="container" >
-          <div className="row pt-5 justify-content-center ">
-            <div className="col-lg-6 display-5 mb-5 fw-bold text-center">
-              <p>All Products</p>
+          <div className="container">
+            <div className="row pt-5 justify-content-center ">
+              <div className="col-lg-6 display-5 mb-5 fw-bold text-center">
+                <p>All Products</p>
+              </div>
             </div>
-          </div>
-          <div className="row justify-content-center row-cols-2 gy-3 ">
-            {allProducts.map((a) => (
-              <div className="col-lg-4 col-md-4 col-12 col-sm-10  ">
-              <div className="w-100" >
-                <div className="card shadow " >
-                  <img
-                    src={a.image}
-                    style={{ height: 250 }}
-                    className="card-img-top img-fluid"
-                  />
-                  <div className="card-body">
-                    <div className="card-text pb-2">
-                      <div>
-                        <div className="d-flex justify-content-between align-item-top">
-                          <div className="d-flex gap-2">
-                            <div className="ring bg-primary"></div>
-                            <div className="ring bg-primary"></div>
-                            <div className="ring bg-primary"></div>
-                            <div className="ring bg-primary"></div>
-                          </div>
+            <div className="row justify-content-center row-cols-2 gy-3 ">
+              {allProducts.map((a) => (
+                <div className="col-lg-4 col-md-4 col-12 col-sm-10  ">
+                  <div className="w-100">
+                    <div className="card shadow ">
+                      <img
+                        src={a.image}
+                        style={{ height: 300 }}
+                        className="card-img-top img-fluid allImages "
+                      />
+                      <div className="card-body">
+                        <div className="card-text pb-2">
                           <div>
-                          <i className="bi bi-cart-check fs-2"></i>
+                            <div className="d-flex justify-content-between align-item-top">
+                              <div className="d-flex gap-2">
+                                <div className="ring bg-primary"></div>
+                                <div className="ring bg-primary"></div>
+                                <div className="ring bg-primary"></div>
+                                <div className="ring bg-primary"></div>
+                              </div>
+                              <div>
+                                <i className="bi bi-cart-check fs-2"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <h5 className="card-title- text-truncate h5">
+                          {a.name}
+                        </h5>
+                        <div className="card-text">
+                          <div>
+                            <h6 className="h6">{a.price}</h6>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <h5 className="card-title- text-truncate h5">{a.name}</h5>
-                    <div className="card-text">
-                      <div>
-                        <h6 className="h6">{a.price}</h6>
-                      </div>
-                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section5">
+        <div className="container mt-5">
+          <div className="row justify-content-around align-items-center py-5 gy-3">
+            <div className="col-lg-4 text-lg-start text-center">
+              <div>
+                <div>
+                  <p className="lead">
+                    Really happy with my Office Chair Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Facere perferendis, est
+                    temporibus ut .
+                  </p>
+                </div>
+                <div>
+                  <h6>Randy Ortan</h6>
+                </div>
+                <div
+                  className="shadow px-3 d-flex justify-content-lg-start gap-5 align-items-center justify-content-center"
+                  id="reviewCard"
+                >
+                  <div>
+                    <img
+                      className="img-fluid"
+                      src={ap1}
+                      alt=""
+                      style={{ width: 50, height: 50 }}
+                    />
+                  </div>
+                  <div className="d-flex flex-column  justify-content-end ">
+                    <p className="h6 my-0 ">Stylish Chair</p>
+                    <p className="h6 my-0  ">$14.99</p>
+                    <p className="h6 my-0 ">
+                      <i
+                        className="bi bi-star-fill pe-1 "
+                        style={{ color: "yellow" }}
+                      ></i>
+                      <i
+                        className="bi bi-star-fill pe-1 "
+                        style={{ color: "yellow" }}
+                      ></i>
+                      <i
+                        className="bi bi-star-fill pe-1 "
+                        style={{ color: "yellow" }}
+                      ></i>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="col-lg-5">
+              <img className="img-fluid" src={chairPng} alt="" />
+            </div>
+          </div>
+          <div className="row py-2 justify-content-center">
+            <div className="col-lg-2">
+              <div>
+                <i className="bi bi-circle"></i>{" "}
+                <i className="bi bi-circle"></i>{" "}
+                <i className="bi bi-circle-fill"> </i>
+                <i className="bi bi-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section6">
+        <div className="container py-5">
+          <div className="row justify-content-center">
+            <div className="col-lg-5 text-center">
+              <div className="display-5 fw-bold">Blogs and Insights</div>
+              <p className="Muted pt-2">
+                Explore our blogs for design Inspirations and Useful Tips
+              </p>
+            </div>
+          </div>
+          <div className="row justify-content-center gy-3">
+            {blog.map((a) => (
+              <div className="col-lg-4 ">
+                <div>
+                  <img
+                    src={a.image}
+                    className="w-100"
+                    alt=""
+                    style={{ height: 500 }}
+                  />
+                </div>
+              </div>
             ))}
           </div>
         </div>
-        </div>
-        
-
       </section>
-      <section id="section5">
-        <div className="container my-5">
-<div className="row justify-content-around py-5">
-  <div className="col-lg-5">
-    <div>
-      <div>
-        <p>Really happy with my Office Chair</p>
-      </div>
-      <div>
-        <h6>Randy Ortan</h6>
-      </div>
-      <div className="shadow py-3 d-flex justify-content-around" id="reviewCard">
-        <div><img className="img-fluid border border-2 border-success" src={ap1} alt="" /></div>
-        <div className="d-flex">
-          <p className="h6">Stylish Chair</p>
-          <p className="h6 ">$14.99</p>
-          <p className="h6">wwww</p>
-        </div>
-      </div>
 
-    </div>
-  </div>
-  <div className="col-lg-5">
-    <img className="img-fluid" src={chairPng} alt="" />
-  </div>
-</div>
-
+      <footer>
+        <div className="container">
+          <div className="row gy-3 justify-content-center">
+            <div className="col-lg-4 col-md-">
+              <div>
+                <p className="h4">FurniLux</p>
+                <p className="h6">Designing Dreams, Creating comforts</p>
+                <p className="h6"><span className="me-2"><i className="bi bi-telephone"></i></span>0202202</p>
+                <p className="h6"><span className="me-2"><i className="bi bi-envelope"></i></span>sdsd@gmail</p>
+                <p className="h6"><span className="me-2"><i className="bi bi-geo-alt"></i></span>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div className="col-lg-2 col-sm-6">
+              <div>
+              <p className="h4">About Us</p>
+              <ul className="footerUl list-group">
+                <li  className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">About Us</a></li>
+                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Blog</a></li>
+                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Contact Us</a></li>
+                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Popular Question</a></li>
+              </ul>
+              </div>
+            </div>
+            <div className="col-lg-2 col-sm-6">
+            <div>
+              <p className="h4">What's Popular</p>
+              <ul className="footerUl list-group">
+                <li  className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">King Size Beds</a></li>
+                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Blog</a></li>
+                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Sofas</a></li>
+                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Popular Question</a></li>
+              </ul>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div>
+                <p className="h4">Get 15% off your first order</p>
+                <p className="h6">Subscribe our news letter and get discount for your first order! Also recieve update and more</p>
+                <div className="  mt-1 border rounded-pill py-1 px-2"><i className="px-2 bi bi-envelope"></i> <input className="border-0 mx-3" placeholder="Email Address" type="text" /> <button className=" ms-5 btn rounded-pill border-success">Subscribe</button></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 }
