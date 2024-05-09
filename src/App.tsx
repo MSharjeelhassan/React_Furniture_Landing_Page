@@ -256,9 +256,7 @@ function App() {
                               <div className="ring bg-primary"></div>
                               <div className="ring bg-primary"></div>
                             </div>
-                            {/* <div>
-                              <i className="bi bi-arrow-right"></i>
-                            </div> */}
+                      
                           </div>
                         </div>
                       </div>
