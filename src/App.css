@@ -25,7 +25,7 @@
 #hero{
   background-image: url(./images/luxurySofa.jpg);
   background-repeat: no-repeat;
-  background-size:cover ;
+  background-size:contain ;
   
 }
 #section3{

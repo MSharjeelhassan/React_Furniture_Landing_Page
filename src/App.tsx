@@ -109,6 +109,17 @@ let blog = [
   },
 ];
 
+let hero = [
+  {
+    title: "Sofa",
+    image: ap1,
+  },
+  { title: "Bed", image: ap2 },
+  { title: "Dresser", image: ap3 },
+  { title: "Lamp", image: ap4 },
+  { title: "Chair", image: ap5 },
+  { title: "Decor", image: ap6 },
+];
 function App() {
   const [count, setCount] = useState(0);
 
@@ -117,8 +128,89 @@ function App() {
       <p className="bg-black text-white py-2 text-center my-0">
         Enjoy 30% off-Shop Now and Save Big !
       </p>
-
-      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-primary justify-content-around">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container">
+          <a className="navbar-brand" href="#">
+            Navbar
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="collapse navbar-collapse bg-primary bg-lg-none"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link disabled" aria-disabled="true">
+                  Disabled
+                </a>
+              </li>
+            </ul>
+            <form className="d-flex" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      {/* <nav className="navbar navbar-expand-lg bg-body-tertiary  justify-content-around">
         <div className="container">
           <a className="navbar-brand" href="#">
             LuxuryFurn
@@ -191,7 +283,7 @@ function App() {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> */}
       <section className="" id="hero">
         <div className="container">
           <div className="row justify-content-center">
@@ -220,6 +312,19 @@ function App() {
                 >
                   Shop Now <i className="bi bi-arrow-right"></i>
                 </button>
+              </div>
+            </div>
+          </div>
+          <div className="row  justify-content-center " style={{paddingTop:500}}>
+            <div className="col-lg-5 position-relative">
+              <div className="position-absolute  d-flex gap-5 justify-content-center" style={{top:-30,right:-200}}>
+              {hero.map((a)=>(
+
+                <div className="d-none d-lg-flex gap-3 align-items-center border rounded p-2 " style={{backgroundColor:"lightblue"}}>
+                  <div style={{width:50,height:50}}><img className="w-100 h-100" src={a.image} alt="" /></div>
+                  <div>{a.title}</div>
+                </div>
+              ))}
               </div>
             </div>
           </div>
@@ -256,7 +361,6 @@ function App() {
                               <div className="ring bg-primary"></div>
                               <div className="ring bg-primary"></div>
                             </div>
-                      
                           </div>
                         </div>
                       </div>
@@ -373,7 +477,7 @@ function App() {
       <section id="section5">
         <div className="container mt-5">
           <div className="row justify-content-around align-items-center py-5 gy-3">
-            <div className="col-lg-4 text-lg-start text-center">
+            <div className="col-lg-4 text-lg-start text-center justify-content-center">
               <div>
                 <div>
                   <p className="lead">
@@ -423,7 +527,7 @@ function App() {
             </div>
           </div>
           <div className="row py-2 justify-content-center">
-            <div className="col-lg-2">
+            <div className="col-lg-2 col-12 text-center">
               <div>
                 <i className="bi bi-circle"></i>{" "}
                 <i className="bi bi-circle"></i>{" "}
@@ -468,38 +572,114 @@ function App() {
               <div>
                 <p className="h4">FurniLux</p>
                 <p className="h6">Designing Dreams, Creating comforts</p>
-                <p className="h6"><span className="me-2"><i className="bi bi-telephone"></i></span>0202202</p>
-                <p className="h6"><span className="me-2"><i className="bi bi-envelope"></i></span>sdsd@gmail</p>
-                <p className="h6"><span className="me-2"><i className="bi bi-geo-alt"></i></span>Lorem ipsum dolor sit amet.</p>
+                <p className="h6">
+                  <span className="me-2">
+                    <i className="bi bi-telephone"></i>
+                  </span>
+                  0202202
+                </p>
+                <p className="h6">
+                  <span className="me-2">
+                    <i className="bi bi-envelope"></i>
+                  </span>
+                  sdsd@gmail
+                </p>
+                <p className="h6">
+                  <span className="me-2">
+                    <i className="bi bi-geo-alt"></i>
+                  </span>
+                  Lorem ipsum dolor sit amet.
+                </p>
               </div>
             </div>
             <div className="col-lg-2 col-sm-6">
               <div>
-              <p className="h4">About Us</p>
-              <ul className="footerUl list-group">
-                <li  className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">About Us</a></li>
-                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Blog</a></li>
-                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Contact Us</a></li>
-                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Popular Question</a></li>
-              </ul>
+                <p className="h4">About Us</p>
+                <ul className="footerUl list-group">
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">About Us</a>
+                  </li>
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">Blog</a>
+                  </li>
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">Contact Us</a>
+                  </li>
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">Popular Question</a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col-lg-2 col-sm-6">
-            <div>
-              <p className="h4">What's Popular</p>
-              <ul className="footerUl list-group">
-                <li  className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">King Size Beds</a></li>
-                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Blog</a></li>
-                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Sofas</a></li>
-                <li className=""><i className="me-2  bi bi-arrow-up-right" style={{fontSize:12}}></i><a href="">Popular Question</a></li>
-              </ul>
+              <div>
+                <p className="h4">What's Popular</p>
+                <ul className="footerUl list-group">
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">King Size Beds</a>
+                  </li>
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">Blog</a>
+                  </li>
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">Sofas</a>
+                  </li>
+                  <li className="">
+                    <i
+                      className="me-2  bi bi-arrow-up-right"
+                      style={{ fontSize: 12 }}
+                    ></i>
+                    <a href="">Popular Question</a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col-lg-4">
               <div>
                 <p className="h4">Get 15% off your first order</p>
-                <p className="h6">Subscribe our news letter and get discount for your first order! Also recieve update and more</p>
-                <div className="  mt-1 border rounded-pill py-1 px-2"><i className="px-2 bi bi-envelope"></i> <input className="border-0 mx-3" placeholder="Email Address" type="text" /> <button className=" ms-5 btn rounded-pill border-success">Subscribe</button></div>
+                <p className="h6">
+                  Subscribe our news letter and get discount for your first
+                  order! Also recieve update and more
+                </p>
+                <div className="  mt-1 border rounded-pill py-1 px-2">
+                  <i className="px-2 bi bi-envelope"></i>{" "}
+                  <input
+                    className="border-0 mx-3"
+                    placeholder="Email Address"
+                    type="text"
+                  />{" "}
+                  <button className=" ms-5 btn rounded-pill border-success">
+                    Subscribe
+                  </button>
+                </div>
               </div>
             </div>
           </div>
