@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import card1 from "./images/card1.jpg";
 import card2 from "./images/card2.jpg";
 import card3 from "./images/card3.jpg";
@@ -100,7 +101,7 @@ let blog = [
   {
     image: blog2,
     title: "Wild Sofa",
-    des: "lorem dasfffgdfgsdfgdf sfdgsfgsdfg asfgsdfgfdsfdg",
+    des: "lorem dasfffgdfgsdfgdf sfdgsfgsdfg asfgsdfgfdsfdg dsdsddfsdffffffffffffffffffffffffffff",
   },
   {
     image: blog3,
@@ -128,91 +129,10 @@ function App() {
       <p className="bg-black text-white py-2 text-center my-0">
         Enjoy 30% off-Shop Now and Save Big !
       </p>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse bg-primary bg-lg-none"
-            id="navbarSupportedContent"
-          >
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">
-                  Disabled
-                </a>
-              </li>
-            </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      {/* <nav className="navbar navbar-expand-lg bg-body-tertiary  justify-content-around">
-        <div className="container">
-          <a className="navbar-brand" href="#">
+
+      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+        <div className="container ">
+          <a className="navbar-brand" href="#hero">
             LuxuryFurn
           </a>
           <button
@@ -231,44 +151,41 @@ function App() {
             id="navbarSupportedContent"
           >
             {" "}
-            <ul
-              className="navbar-nav  me-auto mb-2 mb-lg-0 gap-3"
-              style={{ marginLeft: 300 }}
-            >
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-3 " id="navLi1">
               <li className="nav-item ">
                 <a
                   className="nav-link active text-decoration-underline"
                   aria-current="page"
-                  href="#"
+                  href="#hero"
                 >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#section4">
                   Categories
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link " href="#">
+                <a className="nav-link " href="#section6">
                   About Us
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link " href="#">
+                <a className="nav-link " href="#pages">
                   Pages
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link " href="#">
+                <a className="nav-link " href="#contactUs">
                   Contact Us
                 </a>
               </li>
             </ul>
             <ul
-              className="navbar-nav me-aut mb-2 mb-lg-0 gap-3"
-              style={{ marginRight: 100 }}
+              className="navbar-nav  mb-2 mb-lg-0 gap-3  "
+             
             >
               <li className="nav-item">
                 <a className="nav-link " href="#">
@@ -283,59 +200,71 @@ function App() {
             </ul>
           </div>
         </div>
-      </nav> */}
+      </nav>
       <section className="" id="hero">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-6 mt-5">
-              <div className="display-5 text-center pt-5 fw-bold">
-                <p>
-                  LuxuryFurn-<span className="text-white">Your Brand for</span>{" "}
+            <div className="col-lg-12 mt-5 ">
+              <div className="display-5 text-center pt-5 fw-bold pe-5">
+                <p id="heroP">
+                  LuxuryFurn-Your Brand for{" "}
                   <span className="pt-2">Stylish Luxury</span>
                 </p>
               </div>
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-lg-4 ">
-              <div className="h6 text-center text-white py-1">
-                <p>Discover a fusion of modern and elegant design</p>
+            <div className="col-lg-4">
+              <div className="h6 h2-lg text-center py-1 ">
+                <p className="">
+                  Discover a fusion of modern and elegant design
+                </p>
               </div>
             </div>
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-6 ">
-              <div className=" text-center py-5" style={{ marginBottom: 400 }}>
+              <div id="heroDiv" className=" text-center py-5 ">
                 <button
                   type="button"
-                  className="btn btn-outline-primary rounded-pill px-5"
+                  className="btn btn-outline-primary rounded-pill px-5 "
                 >
                   Shop Now <i className="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
-          <div className="row  justify-content-center " style={{paddingTop:500}}>
-            <div className="col-lg-5 position-relative">
-              <div className="position-absolute  d-flex gap-5 justify-content-center" style={{top:-30,right:-200}}>
-              {hero.map((a)=>(
-
-                <div className="d-none d-lg-flex gap-3 align-items-center border rounded p-2 " style={{backgroundColor:"lightblue"}}>
-                  <div style={{width:50,height:50}}><img className="w-100 h-100" src={a.image} alt="" /></div>
-                  <div>{a.title}</div>
-                </div>
-              ))}
+          <div
+            className="row d-lg-flex d-none justify-content-center " id="pages"
+            style={{ paddingTop: 500 }}
+          >
+            <div className="col-lg-5 position-relative" >
+              <div
+                className="position-absolute  d-flex gap-5 justify-content-center"
+                style={{ top: -30, right: -200 }}
+              >
+                {hero.map((a) => (
+                  <div id="pageDiv"
+                    className="d-none d-lg-flex gap-3 align-items-center border rounded p-2 "
+                    style={{ backgroundColor: "lightblue" }}
+                  >
+                    <div style={{ width: 50, height: 50 }}>
+                      <img className="w-100 h-100" src={a.image} alt="" />
+                    </div>
+                    <div>{a.title}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
       <section id="section2">
-        <div className="container">
+        <div className="container mt-5 py-5">
           <div className="row justify-content-center">
             <div
               className=" text-center col-lg-12 col-md-12 col-12 col-sm-10 display-5 mb-5 fw-bold"
-              style={{ marginTop: 150 }}
+              /*style={{ marginTop: 150 }}*/
             >
               <p>Elevate Your Living Room</p>
             </div>
@@ -392,11 +321,11 @@ function App() {
                 <div>
                   <div className="d-flex gap-3 pb-2 justify-content-center justify-content-lg-start ">
                     <div className="ring overflow-hidden border border-2 border-success">
-                      <img className="img-fluid" src={ring1} alt="" />
+                      <img className="w-100 h-100" src={ring1} alt="" />
                     </div>
                     <div className="ring bg-primary"></div>
                     <div className="ring overflow-hidden">
-                      <img className="img-fluid" src={ring3} alt="" />
+                      <img className="w-100 h-100" src={ring3} alt="" />
                     </div>
                   </div>
                 </div>
@@ -548,9 +477,9 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="row justify-content-center gy-3">
+          <div className="row justify-content-center gy-5 ">
             {blog.map((a) => (
-              <div className="col-lg-4 ">
+              <div className="col-lg-4 position-relative ">
                 <div>
                   <img
                     src={a.image}
@@ -559,17 +488,25 @@ function App() {
                     style={{ height: 500 }}
                   />
                 </div>
+                <div
+                  id="blogDiv"
+                  className="bg-white shadow w-75 ps-3 pe-3 pt-2 pb-5 rounded "
+                >
+                  <p className="fw-bold ">{a.title}</p>
+                  <p>{a.des}</p>
+                  <p className="fw-bold h6 text-primary">Read More</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <footer>
-        <div className="container">
-          <div className="row gy-3 justify-content-center">
-            <div className="col-lg-4 col-md-">
-              <div>
+      <footer className="bg-body-secondary mt-5" id="contactUs">
+        <div className="container ">
+          <div className="row gy-3 justify-content-center py-3">
+            <div className="col-lg-3 col-md-3">
+              <div className="text-center text-lg-start">
                 <p className="h4">FurniLux</p>
                 <p className="h6">Designing Dreams, Creating comforts</p>
                 <p className="h6">
@@ -593,7 +530,7 @@ function App() {
               </div>
             </div>
             <div className="col-lg-2 col-sm-6">
-              <div>
+              <div className="text-center text-lg-start">
                 <p className="h4">About Us</p>
                 <ul className="footerUl list-group">
                   <li className="">
@@ -628,7 +565,7 @@ function App() {
               </div>
             </div>
             <div className="col-lg-2 col-sm-6">
-              <div>
+              <div className="text-center text-lg-start">
                 <p className="h4">What's Popular</p>
                 <ul className="footerUl list-group">
                   <li className="">
@@ -662,23 +599,27 @@ function App() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-5">
               <div>
-                <p className="h4">Get 15% off your first order</p>
-                <p className="h6">
+                <p className="h4 text-center text-lg-start">Get 15% off your first order</p>
+                <p className="h6 text-center text-lg-start">
                   Subscribe our news letter and get discount for your first
                   order! Also recieve update and more
                 </p>
-                <div className="  mt-1 border rounded-pill py-1 px-2">
-                  <i className="px-2 bi bi-envelope"></i>{" "}
-                  <input
-                    className="border-0 mx-3"
-                    placeholder="Email Address"
-                    type="text"
-                  />{" "}
-                  <button className=" ms-5 btn rounded-pill border-success">
-                    Subscribe
-                  </button>
+                <div className=" px-1 py-1 border border-success rounded-pill d-flex align-items-center justify-content-between gap-2">
+                  <div className="d-flex align-items-center flex-grow-1">
+                    <i className="px-2 bi bi-envelope"></i>{" "}
+                    <input 
+                      className=" form-control  bg-transparent outline-none border-0 "
+                      placeholder="Email Address"
+                      type="text"
+                    />{" "}
+                  </div>
+                  <div>
+                    <button className=" btn rounded-pill text-white bg-success border-success">
+                      Subscribe
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

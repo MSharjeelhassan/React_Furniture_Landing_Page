@@ -7,15 +7,20 @@
 *{
   margin:0;
   padding: 0;
-  /* overflow-x: hidden;  */
+  
   
 }
  body{
    display: block !important;
   margin:0 !important;
   padding:0 !important;
-  /* overflow-x:hidden !important ; */
+
 } 
+
+.navbar-nav .nav-item .nav-link:hover{
+  color: rgb(190, 190, 37) !important;
+  text-decoration: dotted !important;
+}
 
 /* #root{
   display: block !important;
@@ -25,9 +30,19 @@
 #hero{
   background-image: url(./images/luxurySofa.jpg);
   background-repeat: no-repeat;
-  background-size:contain ;
+  background-size:cover ;
+  background-position: center;
   
 }
+
+#pageDiv{
+   transition: 0.5s ;
+}
+#pageDiv:hover{
+  transform: translateY(-10px) ;
+  background-color: #0fa6cc !important;
+}
+
 #section3{
   background-image: linear-gradient(to right, white, #ACE1AF 90%);
 }
@@ -100,4 +115,41 @@
 }
 .footerUl li{
   list-style-type:none
+}
+
+/* @media (min-width: 768px) {
+  #heroP {
+    padding-top: 150px !important;
+    padding-bottom: 50px !important;
+   
+    
+  }
+} */
+
+/* @media (min-width: 768px) {
+  #heroDiv {
+    margin-bottom: 400px !important;
+    
+    
+  }
+} */
+
+#blogDiv{
+  height: 170px;
+background-color: rgba(255, 255, 255, 0.65) !important;
+  position: absolute;
+  border: 0px solid red;
+  top: 70%;
+  right: 12px;
+  
+
+}
+input{
+  
+  outline: none !important
+}
+
+input:focus{
+  outline: 100%;
+  outline: dashed !important
 }
